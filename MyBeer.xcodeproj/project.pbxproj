@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B9D84BE728CB973B003E68C4 /* MyBeerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D84BE628CB973B003E68C4 /* MyBeerApp.swift */; };
+		B9D84BE928CB973B003E68C4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D84BE828CB973B003E68C4 /* MainView.swift */; };
+		B9D84BEB28CB973C003E68C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9D84BEA28CB973C003E68C4 /* Assets.xcassets */; };
+		B9D84BEE28CB973C003E68C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9D84BED28CB973C003E68C4 /* Preview Assets.xcassets */; };
+		B9D84BF628CB9786003E68C4 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B9D84BF528CB9786003E68C4 /* ComposableArchitecture */; };
+		B9D84BF928CB97AC003E68C4 /* TCACoordinators in Frameworks */ = {isa = PBXBuildFile; productRef = B9D84BF828CB97AC003E68C4 /* TCACoordinators */; };
+		B9D84BFC28CB97CB003E68C4 /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D84BFB28CB97CB003E68C4 /* BaseTargetType.swift */; };
+		B9D84BFE28CB9802003E68C4 /* BeerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D84BFD28CB9802003E68C4 /* BeerApi.swift */; };
+		B9D84C0028CB98AB003E68C4 /* Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D84BFF28CB98AB003E68C4 /* Effect.swift */; };
+		B9D84C0228CB99A5003E68C4 /* BeerEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D84C0128CB99A5003E68C4 /* BeerEffect.swift */; };
+		B9D84C0528CB9A1B003E68C4 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D84C0428CB9A1B003E68C4 /* Beer.swift */; };
+		B9D84C0828CBBB39003E68C4 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = B9D84C0728CBBB39003E68C4 /* Algorithms */; };
+		B9D84C0B28CBBEEB003E68C4 /* ScreenCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D84C0A28CBBEEB003E68C4 /* ScreenCore.swift */; };
+		B9D84C0D28CBC322003E68C4 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D84C0C28CBC322003E68C4 /* DetailView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B9D84BE328CB973B003E68C4 /* MyBeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9D84BE628CB973B003E68C4 /* MyBeerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBeerApp.swift; sourceTree = "<group>"; };
+		B9D84BE828CB973B003E68C4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B9D84BEA28CB973C003E68C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B9D84BED28CB973C003E68C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B9D84BFB28CB97CB003E68C4 /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
+		B9D84BFD28CB9802003E68C4 /* BeerApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerApi.swift; sourceTree = "<group>"; };
+		B9D84BFF28CB98AB003E68C4 /* Effect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effect.swift; sourceTree = "<group>"; };
+		B9D84C0128CB99A5003E68C4 /* BeerEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerEffect.swift; sourceTree = "<group>"; };
+		B9D84C0428CB9A1B003E68C4 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		B9D84C0A28CBBEEB003E68C4 /* ScreenCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCore.swift; sourceTree = "<group>"; };
+		B9D84C0C28CBC322003E68C4 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B9D84BE028CB973B003E68C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9D84C0828CBBB39003E68C4 /* Algorithms in Frameworks */,
+				B9D84BF928CB97AC003E68C4 /* TCACoordinators in Frameworks */,
+				B9D84BF628CB9786003E68C4 /* ComposableArchitecture in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B9D84BDA28CB973B003E68C4 = {
+			isa = PBXGroup;
+			children = (
+				B9D84BE528CB973B003E68C4 /* MyBeer */,
+				B9D84BE428CB973B003E68C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B9D84BE428CB973B003E68C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B9D84BE328CB973B003E68C4 /* MyBeer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B9D84BE528CB973B003E68C4 /* MyBeer */ = {
+			isa = PBXGroup;
+			children = (
+				B9D84C0928CBBEE3003E68C4 /* Screen */,
+				B9D84C0328CB9A17003E68C4 /* Entity */,
+				B9D84BFA28CB97B7003E68C4 /* Network */,
+				B9D84BE628CB973B003E68C4 /* MyBeerApp.swift */,
+				B9D84BE828CB973B003E68C4 /* MainView.swift */,
+				B9D84C0C28CBC322003E68C4 /* DetailView.swift */,
+				B9D84BEA28CB973C003E68C4 /* Assets.xcassets */,
+				B9D84BEC28CB973C003E68C4 /* Preview Content */,
+			);
+			path = MyBeer;
+			sourceTree = "<group>";
+		};
+		B9D84BEC28CB973C003E68C4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B9D84BED28CB973C003E68C4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B9D84BFA28CB97B7003E68C4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B9D84BFB28CB97CB003E68C4 /* BaseTargetType.swift */,
+				B9D84BFD28CB9802003E68C4 /* BeerApi.swift */,
+				B9D84BFF28CB98AB003E68C4 /* Effect.swift */,
+				B9D84C0128CB99A5003E68C4 /* BeerEffect.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B9D84C0328CB9A17003E68C4 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B9D84C0428CB9A1B003E68C4 /* Beer.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		B9D84C0928CBBEE3003E68C4 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				B9D84C0A28CBBEEB003E68C4 /* ScreenCore.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B9D84BE228CB973B003E68C4 /* MyBeer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9D84BF128CB973C003E68C4 /* Build configuration list for PBXNativeTarget "MyBeer" */;
+			buildPhases = (
+				B9D84BDF28CB973B003E68C4 /* Sources */,
+				B9D84BE028CB973B003E68C4 /* Frameworks */,
+				B9D84BE128CB973B003E68C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyBeer;
+			packageProductDependencies = (
+				B9D84BF528CB9786003E68C4 /* ComposableArchitecture */,
+				B9D84BF828CB97AC003E68C4 /* TCACoordinators */,
+				B9D84C0728CBBB39003E68C4 /* Algorithms */,
+			);
+			productName = MyBeer;
+			productReference = B9D84BE328CB973B003E68C4 /* MyBeer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B9D84BDB28CB973B003E68C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					B9D84BE228CB973B003E68C4 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = B9D84BDE28CB973B003E68C4 /* Build configuration list for PBXProject "MyBeer" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B9D84BDA28CB973B003E68C4;
+			packageReferences = (
+				B9D84BF428CB9786003E68C4 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				B9D84BF728CB97AC003E68C4 /* XCRemoteSwiftPackageReference "TCACoordinators" */,
+				B9D84C0628CBBB39003E68C4 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+			);
+			productRefGroup = B9D84BE428CB973B003E68C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B9D84BE228CB973B003E68C4 /* MyBeer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B9D84BE128CB973B003E68C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9D84BEE28CB973C003E68C4 /* Preview Assets.xcassets in Resources */,
+				B9D84BEB28CB973C003E68C4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B9D84BDF28CB973B003E68C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9D84C0228CB99A5003E68C4 /* BeerEffect.swift in Sources */,
+				B9D84C0D28CBC322003E68C4 /* DetailView.swift in Sources */,
+				B9D84C0028CB98AB003E68C4 /* Effect.swift in Sources */,
+				B9D84BFE28CB9802003E68C4 /* BeerApi.swift in Sources */,
+				B9D84BE928CB973B003E68C4 /* MainView.swift in Sources */,
+				B9D84C0B28CBBEEB003E68C4 /* ScreenCore.swift in Sources */,
+				B9D84BE728CB973B003E68C4 /* MyBeerApp.swift in Sources */,
+				B9D84C0528CB9A1B003E68C4 /* Beer.swift in Sources */,
+				B9D84BFC28CB97CB003E68C4 /* BaseTargetType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B9D84BEF28CB973C003E68C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B9D84BF028CB973C003E68C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B9D84BF228CB973C003E68C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MyBeer/Preview Content\"";
+				DEVELOPMENT_TEAM = 5BY5MQ6875;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seokho.MyBeer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B9D84BF328CB973C003E68C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MyBeer/Preview Content\"";
+				DEVELOPMENT_TEAM = 5BY5MQ6875;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seokho.MyBeer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B9D84BDE28CB973B003E68C4 /* Build configuration list for PBXProject "MyBeer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9D84BEF28CB973C003E68C4 /* Debug */,
+				B9D84BF028CB973C003E68C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9D84BF128CB973C003E68C4 /* Build configuration list for PBXNativeTarget "MyBeer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9D84BF228CB973C003E68C4 /* Debug */,
+				B9D84BF328CB973C003E68C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B9D84BF428CB9786003E68C4 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+		B9D84BF728CB97AC003E68C4 /* XCRemoteSwiftPackageReference "TCACoordinators" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/johnpatrickmorgan/TCACoordinators";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+		B9D84C0628CBBB39003E68C4 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B9D84BF528CB9786003E68C4 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9D84BF428CB9786003E68C4 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		B9D84BF828CB97AC003E68C4 /* TCACoordinators */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9D84BF728CB97AC003E68C4 /* XCRemoteSwiftPackageReference "TCACoordinators" */;
+			productName = TCACoordinators;
+		};
+		B9D84C0728CBBB39003E68C4 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9D84C0628CBBB39003E68C4 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = B9D84BDB28CB973B003E68C4 /* Project object */;
+}
