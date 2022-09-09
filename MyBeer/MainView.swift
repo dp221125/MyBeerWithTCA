@@ -16,13 +16,14 @@ enum RequestType {
 
 struct MainState: Equatable {
     let id = UUID()
+    var isFirstTime = true
     var beer = OrderedSet<Beer>()
     var oldBeer = OrderedSet<Beer>()
 }
 
 enum MainAction {
     case onAppear(requestType: RequestType)
-    case beer(requestType: RequestType, TaskResult<[Beer]>)
+    case beer(requestType: RequestType, TaskResult<[Beer]>?)
     case itemTapped(beer: Beer)
 }
 
@@ -33,12 +34,17 @@ struct MainEnvironment {
 let mainReducer = Reducer<MainState, MainAction, MainEnvironment> { state, action, environment in
     switch action {
     case let .onAppear(type):
+        let isFirstTime = state.isFirstTime
         return .task {
-            let result: TaskResult<[Beer]>
+            let result: TaskResult<[Beer]>?
             
             switch type {
             case .initialize:
-                result = await environment.beerClient.beer(1, perPage: 20)
+                if isFirstTime {
+                    result = await environment.beerClient.beer(1, perPage: 20)
+                } else {
+                    result = nil
+                }
             case let .loadMore(page):
                 result = await environment.beerClient.beer(page, perPage: 20)
             }
@@ -47,8 +53,12 @@ let mainReducer = Reducer<MainState, MainAction, MainEnvironment> { state, actio
     case let .beer(requestType, .success(value)):
         switch requestType {
         case .initialize:
-            state.beer = OrderedSet(value)
-            state.oldBeer = state.beer
+            if state.isFirstTime {
+                state.isFirstTime = false
+                state.beer = OrderedSet(value)
+                state.oldBeer = state.beer
+                return .none
+            }
             return .none
         case .loadMore(_):
             state.beer = OrderedSet(state.oldBeer + value)
@@ -56,6 +66,8 @@ let mainReducer = Reducer<MainState, MainAction, MainEnvironment> { state, actio
             return .none
         }
     case let .beer(_, .failure(error)):
+        return .none
+    case .beer(_, .none):
         return .none
     case .itemTapped:
         return .none
