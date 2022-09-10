@@ -25,6 +25,9 @@
 		B9D84C1528CC2188003E68C4 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D84C1428CC2188003E68C4 /* RootView.swift */; };
 		B9D84C1928CC21F9003E68C4 /* MainTabCoordinatorCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D84C1828CC21F9003E68C4 /* MainTabCoordinatorCore.swift */; };
 		B9D84C1B28CC2232003E68C4 /* MainTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D84C1A28CC2232003E68C4 /* MainTabCoordinator.swift */; };
+		B9D84C3228CC5D76003E68C4 /* CoreDataEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D84C3128CC5D76003E68C4 /* CoreDataEffect.swift */; };
+		B9D84C3528CC5DF3003E68C4 /* Beer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9D84C3328CC5DF3003E68C4 /* Beer.xcdatamodeld */; };
+		B9D84C3A28CC6171003E68C4 /* PersistentContainerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D84C3928CC6171003E68C4 /* PersistentContainerProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		B9D84C1428CC2188003E68C4 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		B9D84C1828CC21F9003E68C4 /* MainTabCoordinatorCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinatorCore.swift; sourceTree = "<group>"; };
 		B9D84C1A28CC2232003E68C4 /* MainTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinator.swift; sourceTree = "<group>"; };
+		B9D84C3128CC5D76003E68C4 /* CoreDataEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEffect.swift; sourceTree = "<group>"; };
+		B9D84C3428CC5DF3003E68C4 /* FavoriteBeer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteBeer.xcdatamodel; sourceTree = "<group>"; };
+		B9D84C3928CC6171003E68C4 /* PersistentContainerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainerProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 		B9D84BE528CB973B003E68C4 /* MyBeer */ = {
 			isa = PBXGroup;
 			children = (
+				B9D84C3028CC5D64003E68C4 /* CoreData */,
 				B9D84C1128CC2170003E68C4 /* Root */,
 				B9D84C0928CBBEE3003E68C4 /* Screen */,
 				B9D84C0328CB9A17003E68C4 /* Entity */,
@@ -88,6 +95,7 @@
 				B9D84C0C28CBC322003E68C4 /* DetailView.swift */,
 				B9D84BEA28CB973C003E68C4 /* Assets.xcassets */,
 				B9D84BEC28CB973C003E68C4 /* Preview Content */,
+				B9D84C3328CC5DF3003E68C4 /* Beer.xcdatamodeld */,
 			);
 			path = MyBeer;
 			sourceTree = "<group>";
@@ -144,6 +152,15 @@
 				B9D84C1A28CC2232003E68C4 /* MainTabCoordinator.swift */,
 			);
 			path = MainTab;
+			sourceTree = "<group>";
+		};
+		B9D84C3028CC5D64003E68C4 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B9D84C3128CC5D76003E68C4 /* CoreDataEffect.swift */,
+				B9D84C3928CC6171003E68C4 /* PersistentContainerProvider.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +244,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9D84C0228CB99A5003E68C4 /* BeerEffect.swift in Sources */,
+				B9D84C3A28CC6171003E68C4 /* PersistentContainerProvider.swift in Sources */,
+				B9D84C3228CC5D76003E68C4 /* CoreDataEffect.swift in Sources */,
 				B9D84C0D28CBC322003E68C4 /* DetailView.swift in Sources */,
 				B9D84C0028CB98AB003E68C4 /* Effect.swift in Sources */,
 				B9D84BFE28CB9802003E68C4 /* BeerApi.swift in Sources */,
@@ -234,6 +253,7 @@
 				B9D84C0B28CBBEEB003E68C4 /* ScreenCore.swift in Sources */,
 				B9D84BE728CB973B003E68C4 /* MyBeerApp.swift in Sources */,
 				B9D84C1B28CC2232003E68C4 /* MainTabCoordinator.swift in Sources */,
+				B9D84C3528CC5DF3003E68C4 /* Beer.xcdatamodeld in Sources */,
 				B9D84C0528CB9A1B003E68C4 /* Beer.swift in Sources */,
 				B9D84C1328CC2175003E68C4 /* RootCore.swift in Sources */,
 				B9D84C1928CC21F9003E68C4 /* MainTabCoordinatorCore.swift in Sources */,
@@ -484,6 +504,19 @@
 			productName = Algorithms;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		B9D84C3328CC5DF3003E68C4 /* Beer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B9D84C3428CC5DF3003E68C4 /* FavoriteBeer.xcdatamodel */,
+			);
+			currentVersion = B9D84C3428CC5DF3003E68C4 /* FavoriteBeer.xcdatamodel */;
+			path = Beer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B9D84BDB28CB973B003E68C4 /* Project object */;
 }
