@@ -21,6 +21,10 @@
 		B9D84C0828CBBB39003E68C4 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = B9D84C0728CBBB39003E68C4 /* Algorithms */; };
 		B9D84C0B28CBBEEB003E68C4 /* ScreenCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D84C0A28CBBEEB003E68C4 /* ScreenCore.swift */; };
 		B9D84C0D28CBC322003E68C4 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D84C0C28CBC322003E68C4 /* DetailView.swift */; };
+		B9D84C1328CC2175003E68C4 /* RootCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D84C1228CC2175003E68C4 /* RootCore.swift */; };
+		B9D84C1528CC2188003E68C4 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D84C1428CC2188003E68C4 /* RootView.swift */; };
+		B9D84C1928CC21F9003E68C4 /* MainTabCoordinatorCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D84C1828CC21F9003E68C4 /* MainTabCoordinatorCore.swift */; };
+		B9D84C1B28CC2232003E68C4 /* MainTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D84C1A28CC2232003E68C4 /* MainTabCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		B9D84C0428CB9A1B003E68C4 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		B9D84C0A28CBBEEB003E68C4 /* ScreenCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCore.swift; sourceTree = "<group>"; };
 		B9D84C0C28CBC322003E68C4 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		B9D84C1228CC2175003E68C4 /* RootCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCore.swift; sourceTree = "<group>"; };
+		B9D84C1428CC2188003E68C4 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		B9D84C1828CC21F9003E68C4 /* MainTabCoordinatorCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinatorCore.swift; sourceTree = "<group>"; };
+		B9D84C1A28CC2232003E68C4 /* MainTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,7 @@
 		B9D84BE528CB973B003E68C4 /* MyBeer */ = {
 			isa = PBXGroup;
 			children = (
+				B9D84C1128CC2170003E68C4 /* Root */,
 				B9D84C0928CBBEE3003E68C4 /* Screen */,
 				B9D84C0328CB9A17003E68C4 /* Entity */,
 				B9D84BFA28CB97B7003E68C4 /* Network */,
@@ -113,9 +122,28 @@
 		B9D84C0928CBBEE3003E68C4 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				B9D84C1628CC21D6003E68C4 /* MainTab */,
 				B9D84C0A28CBBEEB003E68C4 /* ScreenCore.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		B9D84C1128CC2170003E68C4 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				B9D84C1228CC2175003E68C4 /* RootCore.swift */,
+				B9D84C1428CC2188003E68C4 /* RootView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		B9D84C1628CC21D6003E68C4 /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				B9D84C1828CC21F9003E68C4 /* MainTabCoordinatorCore.swift */,
+				B9D84C1A28CC2232003E68C4 /* MainTabCoordinator.swift */,
+			);
+			path = MainTab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,8 +233,12 @@
 				B9D84BE928CB973B003E68C4 /* MainView.swift in Sources */,
 				B9D84C0B28CBBEEB003E68C4 /* ScreenCore.swift in Sources */,
 				B9D84BE728CB973B003E68C4 /* MyBeerApp.swift in Sources */,
+				B9D84C1B28CC2232003E68C4 /* MainTabCoordinator.swift in Sources */,
 				B9D84C0528CB9A1B003E68C4 /* Beer.swift in Sources */,
+				B9D84C1328CC2175003E68C4 /* RootCore.swift in Sources */,
+				B9D84C1928CC21F9003E68C4 /* MainTabCoordinatorCore.swift in Sources */,
 				B9D84BFC28CB97CB003E68C4 /* BaseTargetType.swift in Sources */,
+				B9D84C1528CC2188003E68C4 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

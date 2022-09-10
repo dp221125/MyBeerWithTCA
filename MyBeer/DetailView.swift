@@ -5,9 +5,9 @@
 //  Created by Milkyo on 2022/09/10.
 //
 
+import ComposableArchitecture
 import Foundation
 import SwiftUI
-import ComposableArchitecture
 
 enum DatailAction {}
 
@@ -20,7 +20,7 @@ struct DetailEnvironment {}
 
 struct DetailView: View {
     let store: Store<DetailState, DatailAction>
-    
+
     var body: some View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
             Text(viewStore.beer.name)

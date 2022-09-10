@@ -17,22 +17,22 @@ public extension BaseTargetType {
     var baseUrl: String {
         return "api.punkapi.com"
     }
-    
+
     var header: [String: String] {
         return [
             "Content-Type": "application/json",
         ]
     }
-    
+
     var url: URL {
         var components = URLComponents()
-        
+
         components.scheme = "https"
-        components.host = self.baseUrl
-        components.path = self.path
+        components.host = baseUrl
+        components.path = path
         components.queryItems = []
-        
-        self.queryParameter?.forEach {
+
+        queryParameter?.forEach {
             components.queryItems?.append(URLQueryItem(
                 name: $0.key,
                 value: "\($0.value)"
@@ -45,16 +45,15 @@ public extension BaseTargetType {
             return URL(string: "")!
         }
     }
-    
+
     var request: URLRequest {
-        var request = URLRequest(url: self.url)
+        var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        
-        self.header.forEach {
+
+        header.forEach {
             request.addValue($0.value, forHTTPHeaderField: $0.key)
         }
-        
-        
+
         return request
     }
 }

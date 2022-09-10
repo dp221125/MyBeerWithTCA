@@ -5,8 +5,8 @@
 //  Created by Milkyo on 2022/09/10.
 //
 
-import Foundation
 import ComposableArchitecture
+import Foundation
 
 protocol BeerEffect {
     func beer(_ page: Int, perPage: Int) async -> TaskResult<[Beer]>
@@ -14,6 +14,6 @@ protocol BeerEffect {
 
 class BeerEffectImpl: BaseEffect<BeerApi>, BeerEffect {
     func beer(_ page: Int, perPage: Int) async -> TaskResult<[Beer]> {
-        return await self.excute(.beer(page: page, perPage: perPage))
+        return await excute(.beer(page: page, perPage: perPage))
     }
 }

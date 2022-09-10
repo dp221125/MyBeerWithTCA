@@ -5,9 +5,9 @@
 //  Created by Milkyo on 2022/09/10.
 //
 
-import SwiftUI
 import ComposableArchitecture
 import OrderedCollections
+import SwiftUI
 
 enum RequestType {
     case initialize
@@ -37,7 +37,7 @@ let mainReducer = Reducer<MainState, MainAction, MainEnvironment> { state, actio
         let isFirstTime = state.isFirstTime
         return .task {
             let result: TaskResult<[Beer]>?
-            
+
             switch type {
             case .initialize:
                 if isFirstTime {
@@ -60,7 +60,7 @@ let mainReducer = Reducer<MainState, MainAction, MainEnvironment> { state, actio
                 return .none
             }
             return .none
-        case .loadMore(_):
+        case .loadMore:
             state.beer = OrderedSet(state.oldBeer + value)
             state.oldBeer = state.beer
             return .none
@@ -74,16 +74,15 @@ let mainReducer = Reducer<MainState, MainAction, MainEnvironment> { state, actio
     }
 }
 
-
 struct MainView: View {
     let store: Store<MainState, MainAction>
-    
+
     var body: some View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
             List(viewStore.beer) { beer in
                 Text(beer.name)
                     .onAppear {
-                        if beer.id > 10 && (beer.id % 19 == 1) {
+                        if beer.id > 10, beer.id % 19 == 1 {
                             viewStore.send(
                                 .onAppear(requestType: .loadMore(page: viewStore.beer.count / 20 + 1))
                             )

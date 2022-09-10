@@ -44,12 +44,14 @@ struct Beer: Codable, Equatable, Identifiable, Hashable {
 }
 
 // MARK: - BoilVolume
+
 struct BoilVolume: Codable, Equatable, Hashable {
     let value: Double?
     let unit: String
 }
 
 // MARK: - Ingredients
+
 struct Ingredients: Codable, Equatable, Hashable {
     let malt: [Malt]
     let hops: [Hop]
@@ -57,6 +59,7 @@ struct Ingredients: Codable, Equatable, Hashable {
 }
 
 // MARK: - Hop
+
 struct Hop: Codable, Equatable, Hashable {
     let name: String
     let amount: BoilVolume
@@ -65,12 +68,14 @@ struct Hop: Codable, Equatable, Hashable {
 }
 
 // MARK: - Malt
+
 struct Malt: Codable, Equatable, Hashable {
     let name: String
     let amount: BoilVolume
 }
 
 // MARK: - Method
+
 struct Method: Codable, Equatable, Hashable {
     let mashTemp: [MashTemp]
     let fermentation: Fermentation
@@ -83,11 +88,13 @@ struct Method: Codable, Equatable, Hashable {
 }
 
 // MARK: - Fermentation
+
 struct Fermentation: Codable, Equatable, Hashable {
     let temp: BoilVolume
 }
 
 // MARK: - MashTemp
+
 struct MashTemp: Codable, Equatable, Hashable {
     let temp: BoilVolume
     let duration: Int?
