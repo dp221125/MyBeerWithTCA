@@ -16,13 +16,13 @@ struct MainTabCoordinatorView: View {
         TCARouter(store) { screen in
             SwitchStore(screen) {
                 CaseLet(
-                    state: /ScreenState.main,
-                    action: ScreenAction.main,
+                    state: /MainScreenState.main,
+                    action: MainScreenAction.main,
                     then: MainView.init
                 )
                 CaseLet(
-                    state: /ScreenState.detail,
-                    action: ScreenAction.detail,
+                    state: /MainScreenState.detail,
+                    action: MainScreenAction.detail,
                     then: DetailView.init
                 )
             }

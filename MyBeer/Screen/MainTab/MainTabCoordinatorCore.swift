@@ -9,8 +9,8 @@ import ComposableArchitecture
 import TCACoordinators
 
 enum MainTabCoordinatorAction: IndexedRouterAction {
-    case routeAction(Int, action: ScreenAction)
-    case updateRoutes([Route<ScreenState>])
+    case routeAction(Int, action: MainScreenAction)
+    case updateRoutes([Route<MainScreenState>])
 }
 
 struct MainTabCoordinatorState: Equatable, IndexedRouterState {
@@ -18,7 +18,7 @@ struct MainTabCoordinatorState: Equatable, IndexedRouterState {
         routes: [.root(.main(.init()), embedInNavigationView: true)]
     )
 
-    var routes: [Route<ScreenState>]
+    var routes: [Route<MainScreenState>]
 }
 
 struct CoordinatorEnvironment {}
@@ -27,8 +27,8 @@ typealias MainTabCoordinatorReducer = Reducer<
     MainTabCoordinatorState, MainTabCoordinatorAction, CoordinatorEnvironment
 >
 
-let mainTabCoordinatorReducer: MainTabCoordinatorReducer = screenReducer
-    .forEachIndexedRoute(environment: { _ in ScreenEnvironment() })
+let mainTabCoordinatorReducer: MainTabCoordinatorReducer = mainScreenReducer
+    .forEachIndexedRoute(environment: { _ in MainScreenEnvironment() })
     .withRouteReducer(
         Reducer<MainTabCoordinatorState, MainTabCoordinatorAction, CoordinatorEnvironment> { state, action, _ in
             switch action {

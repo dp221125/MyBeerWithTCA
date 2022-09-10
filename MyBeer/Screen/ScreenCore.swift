@@ -10,12 +10,12 @@ import Foundation
 import SwiftUI
 import TCACoordinators
 
-enum ScreenAction {
+enum MainScreenAction {
     case main(MainAction)
     case detail(DatailAction)
 }
 
-enum ScreenState: Equatable, Identifiable {
+enum MainScreenState: Equatable, Identifiable {
     case main(MainState)
     case detail(DetailState)
 
@@ -29,13 +29,13 @@ enum ScreenState: Equatable, Identifiable {
     }
 }
 
-struct ScreenEnvironment {}
+struct MainScreenEnvironment {}
 
-let screenReducer = Reducer<ScreenState, ScreenAction, ScreenEnvironment>.combine(
+let mainScreenReducer = Reducer<MainScreenState, MainScreenAction, MainScreenEnvironment>.combine(
     mainReducer
         .pullback(
-            state: /ScreenState.main,
-            action: /ScreenAction.main,
+            state: /MainScreenState.main,
+            action: /MainScreenAction.main,
             environment: { _ in MainEnvironment(beerClient: BeerEffectImpl()) }
         )
 )
